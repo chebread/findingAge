@@ -13,10 +13,14 @@ while True:
 
     if choice == "b":
         age = int(input("나이: "))
+        if age < 0:
+            break
         print("--생년: {} --".format(Func(age, 2021)))
 
     elif choice == "a":
         year = int(input("생년: "))
+        if year > 2021:
+            break
         print("--나이: {} --".format(Func(year, 2021)))
 
     else:
