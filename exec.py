@@ -15,7 +15,10 @@ while True:
         age = int(input("나이: "))
         if age < 0:
             break
-        print("--생년: {} --".format(Func(age, 2021)))
+        if age > 2021:
+            print("--생년: b.c. {}년 --".format(Func(age, 2021) * -1))
+        else:
+            print("--생년: {}년 --".format(Func(age, 2021)))
 
     elif choice == "a":
         year = int(input("생년: "))
